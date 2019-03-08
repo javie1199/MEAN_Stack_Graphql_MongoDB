@@ -1,0 +1,19 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production node -r esm .",
+    "dev": "set NODE_ENV=development&&nodemon -r esm"
+  },
+  "dependencies": {
+    "apollo-server": "^2.4.8",
+    "esm": "^3.2.13",
+    "express": "^4.16.4",
+    "graphql": "^14.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
