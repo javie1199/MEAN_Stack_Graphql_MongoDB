@@ -15,13 +15,9 @@ let userSchema = new Schema({
     timestamps: true
 })
 
-userSchema.pre('save', async function(next){
+userSchema.pre('save', async function(){
     if(this.isModified('password')){
-        try {  this.password =  await hash(this.password, 9)
-        } catch (error) {
-            next(error)
-        }
-    } 
-    next()
+         this.password =  await hash(this.password, 9)
+    }
 })
 export default mongoose.model('User',userSchema);   
