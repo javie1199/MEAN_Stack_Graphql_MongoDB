@@ -11,8 +11,10 @@ app.disable('X-powered-by');
 
 (async()=>{
     try{
+        //connect to the database on mLab
         mongoose.connect(`mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`,{useNewUrlParser: true});
 
+        //set up GraphQl Server with Apollo-Server-Express
         const server = new ApolloServer({
             typeDefs,
             resolvers,

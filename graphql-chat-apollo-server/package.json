@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "apollo-server": "^2.4.8",
+    "bcryptjs": "^2.4.3",
     "esm": "^3.2.13",
     "express": "^4.16.4",
     "graphql": "^14.0.2",
